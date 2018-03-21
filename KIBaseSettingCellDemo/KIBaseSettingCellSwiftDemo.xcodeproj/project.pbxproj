@@ -1,0 +1,621 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		60392A2D77DE63C5937DD507 /* libPods-KIBaseSettingCellSwiftDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D7A411AADFCAD7345C87BC /* libPods-KIBaseSettingCellSwiftDemo.a */; };
+		6F736174206108730014753E /* RCDGroupSettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F736173206108730014753E /* RCDGroupSettingsTableViewCell.swift */; };
+		6F8860F52056631C00A2E13E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8860F42056631C00A2E13E /* AppDelegate.swift */; };
+		6F8860F72056631C00A2E13E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8860F62056631C00A2E13E /* ViewController.swift */; };
+		6F8860FA2056631C00A2E13E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F8860F82056631C00A2E13E /* Main.storyboard */; };
+		6F8860FC2056631C00A2E13E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F8860FB2056631C00A2E13E /* Assets.xcassets */; };
+		6F8860FF2056631C00A2E13E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F8860FD2056631C00A2E13E /* LaunchScreen.storyboard */; };
+		6F886124205670FD00A2E13E /* KIBaseSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F886123205670FD00A2E13E /* KIBaseSettingTableViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6F8861062056631C00A2E13E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6F8860E92056631C00A2E13E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6F8860F02056631C00A2E13E;
+			remoteInfo = KIBaseSettingCellSwiftDemo;
+		};
+		6F8861112056631C00A2E13E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6F8860E92056631C00A2E13E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6F8860F02056631C00A2E13E;
+			remoteInfo = KIBaseSettingCellSwiftDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		50F2C5A1E0991956692E3570 /* Pods-KIBaseSettingCellSwiftDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KIBaseSettingCellSwiftDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KIBaseSettingCellSwiftDemo/Pods-KIBaseSettingCellSwiftDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		52416106525011860134CF1D /* Pods-KIBaseSettingCellSwiftDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KIBaseSettingCellSwiftDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-KIBaseSettingCellSwiftDemo/Pods-KIBaseSettingCellSwiftDemo.release.xcconfig"; sourceTree = "<group>"; };
+		6F736173206108730014753E /* RCDGroupSettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCDGroupSettingsTableViewCell.swift; sourceTree = "<group>"; };
+		6F8860F12056631C00A2E13E /* KIBaseSettingCellSwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KIBaseSettingCellSwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F8860F42056631C00A2E13E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6F8860F62056631C00A2E13E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6F8860F92056631C00A2E13E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6F8860FB2056631C00A2E13E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6F8860FE2056631C00A2E13E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6F8861002056631C00A2E13E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F8861052056631C00A2E13E /* KIBaseSettingCellSwiftDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KIBaseSettingCellSwiftDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F8861102056631C00A2E13E /* KIBaseSettingCellSwiftDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KIBaseSettingCellSwiftDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F88612220566D6A00A2E13E /* KIBaseSettingCell+bridging+Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KIBaseSettingCell+bridging+Header.h"; sourceTree = "<group>"; };
+		6F886123205670FD00A2E13E /* KIBaseSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KIBaseSettingTableViewCell.swift; sourceTree = "<group>"; };
+		94D7A411AADFCAD7345C87BC /* libPods-KIBaseSettingCellSwiftDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KIBaseSettingCellSwiftDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6F8860EE2056631C00A2E13E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60392A2D77DE63C5937DD507 /* libPods-KIBaseSettingCellSwiftDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F8861022056631C00A2E13E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F88610D2056631C00A2E13E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C308BA62DB669525DE4A898 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				94D7A411AADFCAD7345C87BC /* libPods-KIBaseSettingCellSwiftDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		40D5B19914BA9EB76E980E08 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				50F2C5A1E0991956692E3570 /* Pods-KIBaseSettingCellSwiftDemo.debug.xcconfig */,
+				52416106525011860134CF1D /* Pods-KIBaseSettingCellSwiftDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6F8860E82056631C00A2E13E = {
+			isa = PBXGroup;
+			children = (
+				6F8860F32056631C00A2E13E /* KIBaseSettingCellSwiftDemo */,
+				6F8860F22056631C00A2E13E /* Products */,
+				40D5B19914BA9EB76E980E08 /* Pods */,
+				2C308BA62DB669525DE4A898 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6F8860F22056631C00A2E13E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6F8860F12056631C00A2E13E /* KIBaseSettingCellSwiftDemo.app */,
+				6F8861052056631C00A2E13E /* KIBaseSettingCellSwiftDemoTests.xctest */,
+				6F8861102056631C00A2E13E /* KIBaseSettingCellSwiftDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6F8860F32056631C00A2E13E /* KIBaseSettingCellSwiftDemo */ = {
+			isa = PBXGroup;
+			children = (
+				6F8860F42056631C00A2E13E /* AppDelegate.swift */,
+				6F8860F62056631C00A2E13E /* ViewController.swift */,
+				6F886123205670FD00A2E13E /* KIBaseSettingTableViewCell.swift */,
+				6F736173206108730014753E /* RCDGroupSettingsTableViewCell.swift */,
+				6F88612220566D6A00A2E13E /* KIBaseSettingCell+bridging+Header.h */,
+				6F8860F82056631C00A2E13E /* Main.storyboard */,
+				6F8860FB2056631C00A2E13E /* Assets.xcassets */,
+				6F8860FD2056631C00A2E13E /* LaunchScreen.storyboard */,
+				6F8861002056631C00A2E13E /* Info.plist */,
+			);
+			path = KIBaseSettingCellSwiftDemo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6F8860F02056631C00A2E13E /* KIBaseSettingCellSwiftDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F8861192056631C00A2E13E /* Build configuration list for PBXNativeTarget "KIBaseSettingCellSwiftDemo" */;
+			buildPhases = (
+				BA2F1B05FDAB91F9DC9687CC /* [CP] Check Pods Manifest.lock */,
+				6F8860ED2056631C00A2E13E /* Sources */,
+				6F8860EE2056631C00A2E13E /* Frameworks */,
+				6F8860EF2056631C00A2E13E /* Resources */,
+				F8B2FC2291688221BCDB0600 /* [CP] Embed Pods Frameworks */,
+				52691B41D3485AEF8E5CEEFA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KIBaseSettingCellSwiftDemo;
+			productName = KIBaseSettingCellSwiftDemo;
+			productReference = 6F8860F12056631C00A2E13E /* KIBaseSettingCellSwiftDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6F8861042056631C00A2E13E /* KIBaseSettingCellSwiftDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F88611C2056631C00A2E13E /* Build configuration list for PBXNativeTarget "KIBaseSettingCellSwiftDemoTests" */;
+			buildPhases = (
+				6F8861012056631C00A2E13E /* Sources */,
+				6F8861022056631C00A2E13E /* Frameworks */,
+				6F8861032056631C00A2E13E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6F8861072056631C00A2E13E /* PBXTargetDependency */,
+			);
+			name = KIBaseSettingCellSwiftDemoTests;
+			productName = KIBaseSettingCellSwiftDemoTests;
+			productReference = 6F8861052056631C00A2E13E /* KIBaseSettingCellSwiftDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6F88610F2056631C00A2E13E /* KIBaseSettingCellSwiftDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F88611F2056631C00A2E13E /* Build configuration list for PBXNativeTarget "KIBaseSettingCellSwiftDemoUITests" */;
+			buildPhases = (
+				6F88610C2056631C00A2E13E /* Sources */,
+				6F88610D2056631C00A2E13E /* Frameworks */,
+				6F88610E2056631C00A2E13E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6F8861122056631C00A2E13E /* PBXTargetDependency */,
+			);
+			name = KIBaseSettingCellSwiftDemoUITests;
+			productName = KIBaseSettingCellSwiftDemoUITests;
+			productReference = 6F8861102056631C00A2E13E /* KIBaseSettingCellSwiftDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6F8860E92056631C00A2E13E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = MaChat;
+				TargetAttributes = {
+					6F8860F02056631C00A2E13E = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					6F8861042056631C00A2E13E = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6F8860F02056631C00A2E13E;
+					};
+					6F88610F2056631C00A2E13E = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6F8860F02056631C00A2E13E;
+					};
+				};
+			};
+			buildConfigurationList = 6F8860EC2056631C00A2E13E /* Build configuration list for PBXProject "KIBaseSettingCellSwiftDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6F8860E82056631C00A2E13E;
+			productRefGroup = 6F8860F22056631C00A2E13E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6F8860F02056631C00A2E13E /* KIBaseSettingCellSwiftDemo */,
+				6F8861042056631C00A2E13E /* KIBaseSettingCellSwiftDemoTests */,
+				6F88610F2056631C00A2E13E /* KIBaseSettingCellSwiftDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6F8860EF2056631C00A2E13E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F8860FF2056631C00A2E13E /* LaunchScreen.storyboard in Resources */,
+				6F8860FC2056631C00A2E13E /* Assets.xcassets in Resources */,
+				6F8860FA2056631C00A2E13E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F8861032056631C00A2E13E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F88610E2056631C00A2E13E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		52691B41D3485AEF8E5CEEFA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KIBaseSettingCellSwiftDemo/Pods-KIBaseSettingCellSwiftDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA2F1B05FDAB91F9DC9687CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KIBaseSettingCellSwiftDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8B2FC2291688221BCDB0600 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KIBaseSettingCellSwiftDemo/Pods-KIBaseSettingCellSwiftDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6F8860ED2056631C00A2E13E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F886124205670FD00A2E13E /* KIBaseSettingTableViewCell.swift in Sources */,
+				6F8860F72056631C00A2E13E /* ViewController.swift in Sources */,
+				6F8860F52056631C00A2E13E /* AppDelegate.swift in Sources */,
+				6F736174206108730014753E /* RCDGroupSettingsTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F8861012056631C00A2E13E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F88610C2056631C00A2E13E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6F8861072056631C00A2E13E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6F8860F02056631C00A2E13E /* KIBaseSettingCellSwiftDemo */;
+			targetProxy = 6F8861062056631C00A2E13E /* PBXContainerItemProxy */;
+		};
+		6F8861122056631C00A2E13E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6F8860F02056631C00A2E13E /* KIBaseSettingCellSwiftDemo */;
+			targetProxy = 6F8861112056631C00A2E13E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6F8860F82056631C00A2E13E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6F8860F92056631C00A2E13E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6F8860FD2056631C00A2E13E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6F8860FE2056631C00A2E13E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6F8861172056631C00A2E13E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6F8861182056631C00A2E13E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6F88611A2056631C00A2E13E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50F2C5A1E0991956692E3570 /* Pods-KIBaseSettingCellSwiftDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KIBaseSettingCellSwiftDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MaChat.KIBaseSettingCellSwiftDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "KIBaseSettingCellSwiftDemo/KIBaseSettingCell+bridging+Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6F88611B2056631C00A2E13E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52416106525011860134CF1D /* Pods-KIBaseSettingCellSwiftDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KIBaseSettingCellSwiftDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MaChat.KIBaseSettingCellSwiftDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "KIBaseSettingCellSwiftDemo/KIBaseSettingCell+bridging+Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6F88611D2056631C00A2E13E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KIBaseSettingCellSwiftDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MaChat.KIBaseSettingCellSwiftDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KIBaseSettingCellSwiftDemo.app/KIBaseSettingCellSwiftDemo";
+			};
+			name = Debug;
+		};
+		6F88611E2056631C00A2E13E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KIBaseSettingCellSwiftDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MaChat.KIBaseSettingCellSwiftDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KIBaseSettingCellSwiftDemo.app/KIBaseSettingCellSwiftDemo";
+			};
+			name = Release;
+		};
+		6F8861202056631C00A2E13E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KIBaseSettingCellSwiftDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MaChat.KIBaseSettingCellSwiftDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KIBaseSettingCellSwiftDemo;
+			};
+			name = Debug;
+		};
+		6F8861212056631C00A2E13E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KIBaseSettingCellSwiftDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MaChat.KIBaseSettingCellSwiftDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KIBaseSettingCellSwiftDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6F8860EC2056631C00A2E13E /* Build configuration list for PBXProject "KIBaseSettingCellSwiftDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F8861172056631C00A2E13E /* Debug */,
+				6F8861182056631C00A2E13E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F8861192056631C00A2E13E /* Build configuration list for PBXNativeTarget "KIBaseSettingCellSwiftDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F88611A2056631C00A2E13E /* Debug */,
+				6F88611B2056631C00A2E13E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F88611C2056631C00A2E13E /* Build configuration list for PBXNativeTarget "KIBaseSettingCellSwiftDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F88611D2056631C00A2E13E /* Debug */,
+				6F88611E2056631C00A2E13E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F88611F2056631C00A2E13E /* Build configuration list for PBXNativeTarget "KIBaseSettingCellSwiftDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F8861202056631C00A2E13E /* Debug */,
+				6F8861212056631C00A2E13E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6F8860E92056631C00A2E13E /* Project object */;
+}
