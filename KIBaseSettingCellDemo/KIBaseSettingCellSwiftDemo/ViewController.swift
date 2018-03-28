@@ -14,13 +14,14 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView = UITableView.init()
-        self.tableView?.delegate = self
-        self.tableView?.dataSource = self
-        self.view.addSubview(self.tableView!)
-        self.tableView?.frame = CGRect.init(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
-        self.tableView?.separatorStyle = .none
-        self.tableView?.register(RCDGroupSettingsTableViewCell.self, forCellReuseIdentifier: "RCDGroupSettingsTableViewCell")
+        title = "设置"
+        tableView = UITableView.init()
+        tableView?.delegate = self
+        tableView?.dataSource = self
+        view.addSubview(tableView!)
+        tableView?.frame = CGRect.init(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height)
+        tableView?.separatorStyle = .none
+        tableView?.register(RCDGroupSettingsTableViewCell.self, forCellReuseIdentifier: "RCDGroupSettingsTableViewCell")
     }
     
     //MARK: - UITableViewDataSource

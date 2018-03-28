@@ -42,17 +42,17 @@ class KIBaseSettingTableViewCell: UITableViewCell {
     convenience init(leftImageStr:String,leftImageSize:CGSize,rightImageStr:String,rightImageSize:CGSize) {
         self.init(style: .default, reuseIdentifier: nil)
         if leftImageStr.count > 0 {
-            self.leftImageView = UIImageView.init()
-            self.leftImageView?.contentMode = .scaleAspectFill
-            self.leftImageView?.clipsToBounds = true
-            self.setupImageView(imageView: self.leftImageView!, imageStr: leftImageStr, imageSize: leftImageSize, LeftOrRight: 0)
+            leftImageView = UIImageView.init()
+            leftImageView?.contentMode = .scaleAspectFill
+            leftImageView?.clipsToBounds = true
+            setupImageView(imageView: leftImageView!, imageStr: leftImageStr, imageSize: leftImageSize, LeftOrRight: 0)
         }
         
         if rightImageStr.count > 0 {
-            self.rightImageView = UIImageView.init()
-            self.rightImageView?.contentMode = .scaleAspectFill
-            self.rightImageView?.clipsToBounds = true
-            self.setupImageView(imageView: self.rightImageView!, imageStr: rightImageStr, imageSize: rightImageSize, LeftOrRight: 1)
+            rightImageView = UIImageView.init()
+            rightImageView?.contentMode = .scaleAspectFill
+            rightImageView?.clipsToBounds = true
+            setupImageView(imageView: rightImageView!, imageStr: rightImageStr, imageSize: rightImageSize, LeftOrRight: 1)
         }
         
     }
@@ -62,37 +62,37 @@ class KIBaseSettingTableViewCell: UITableViewCell {
     }
     
     func initialize()  {
-        self.leftLabel = UILabel.init()
-        self.leftLabel.font = UIFont.systemFont(ofSize: 16.0)
-        self.leftLabel.textColor = UIColor.black
-        self.leftLabel.translatesAutoresizingMaskIntoConstraints = false
+        leftLabel = UILabel.init()
+        leftLabel.font = UIFont.systemFont(ofSize: 16.0)
+        leftLabel.textColor = UIColor.black
+        leftLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        self.rightLabel = UILabel.init()
-        self.rightLabel.font = UIFont.systemFont(ofSize: 14.0)
-        self.rightLabel.textColor = UIColor.lightText
-        self.rightLabel.translatesAutoresizingMaskIntoConstraints = false
+        rightLabel = UILabel.init()
+        rightLabel.font = UIFont.systemFont(ofSize: 14.0)
+        rightLabel.textColor = UIColor.lightText
+        rightLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        self.rightArrow = UIImageView.init()
-        self.rightArrow?.image = UIImage.init(named: "right_arrow")
-        self.rightArrow?.translatesAutoresizingMaskIntoConstraints = false
+        rightArrow = UIImageView.init()
+        rightArrow?.image = UIImage.init(named: "right_arrow")
+        rightArrow?.translatesAutoresizingMaskIntoConstraints = false
         
-        self.switchButton = UISwitch.init()
-        self.switchButton?.addTarget(self, action: #selector(onClickSwitch(sender:)), for: UIControlEvents.valueChanged)
-        self.switchButton?.isOn = self.switchButtonStatus
-        self.switchButton?.translatesAutoresizingMaskIntoConstraints = false
+        switchButton = UISwitch.init()
+        switchButton?.addTarget(self, action: #selector(onClickSwitch(sender:)), for: UIControlEvents.valueChanged)
+        switchButton?.isOn =  switchButtonStatus
+        switchButton?.translatesAutoresizingMaskIntoConstraints = false
         
-        self.bottomLine = UIView.init()
-        self.bottomLine?.backgroundColor = UIColor.lightGray
-        self.bottomLine?.translatesAutoresizingMaskIntoConstraints = false
+        bottomLine = UIView.init()
+        bottomLine?.backgroundColor = UIColor.lightGray
+        bottomLine?.translatesAutoresizingMaskIntoConstraints = false
         
-        self.contentView.addSubview(self.leftLabel)
-        self.contentView.addSubview(self.rightLabel)
-        self.contentView.addSubview(self.rightArrow!)
-        self.contentView.addSubview(self.switchButton!)
-        self.contentView.addSubview(self.bottomLine!)
+        contentView.addSubview( leftLabel)
+        contentView.addSubview( rightLabel)
+        contentView.addSubview( rightArrow!)
+        contentView.addSubview( switchButton!)
+        contentView.addSubview( bottomLine!)
         
-        self.cellSubViews = ["leftLabel":leftLabel,"rightLabel":rightLabel,"rightArrow":rightArrow ?? UIImageView.init(frame: .zero) ,"switchButton":switchButton ?? UISwitch.init(frame: .zero),"bottomLine":bottomLine ?? UIView.init(frame: .zero)]
-        self.setLayout()
+        cellSubViews = ["leftLabel":leftLabel,"rightLabel":rightLabel,"rightArrow":rightArrow ?? UIImageView.init(frame: .zero) ,"switchButton":switchButton ?? UISwitch.init(frame: .zero),"bottomLine":bottomLine ?? UIView.init(frame: .zero)]
+        setLayout()
         
     }
     
@@ -104,24 +104,24 @@ class KIBaseSettingTableViewCell: UITableViewCell {
     
     func setLayout() {
         
-        self.contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[leftLabel(21)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: self.cellSubViews as! [String : Any]))
+         contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[leftLabel(21)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views:  cellSubViews as! [String : Any]))
         
-        self.contentView.addConstraint(NSLayoutConstraint.init(item: leftLabel, attribute: .centerY, relatedBy: .equal, toItem: self.contentView, attribute: .centerY, multiplier: 1, constant: 0))
-        
-        
-        self.contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[rightLabel(21)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: self.cellSubViews as! [String : Any]))
-        
-        self.contentView.addConstraint(NSLayoutConstraint.init(item: rightLabel, attribute: .centerY, relatedBy: .equal, toItem: self.contentView, attribute: .centerY, multiplier: 1, constant: 0))
+         contentView.addConstraint(NSLayoutConstraint.init(item: leftLabel, attribute: .centerY, relatedBy: .equal, toItem:  contentView, attribute: .centerY, multiplier: 1, constant: 0))
         
         
-        self.contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[rightArrow(13)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: self.cellSubViews as! [String : Any]))
+         contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[rightLabel(21)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views:  cellSubViews as! [String : Any]))
         
-        self.contentView.addConstraint(NSLayoutConstraint.init(item: rightArrow ?? UIImageView.init(frame: .zero), attribute: .centerY, relatedBy: .equal, toItem: self.contentView, attribute: .centerY, multiplier: 1, constant: 0))
+         contentView.addConstraint(NSLayoutConstraint.init(item: rightLabel, attribute: .centerY, relatedBy: .equal, toItem:  contentView, attribute: .centerY, multiplier: 1, constant: 0))
         
-        self.contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-10-[bottomLine]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: self.cellSubViews as! [String : Any]))
         
-        self.contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[bottomLine(0.5)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: self.cellSubViews as! [String : Any]))
-        self.contentView.addConstraint(NSLayoutConstraint.init(item: switchButton ?? UISwitch.init(frame: .zero), attribute: .centerY, relatedBy: .equal, toItem: self.contentView, attribute: .centerY, multiplier: 1, constant: 0))
+         contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[rightArrow(13)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views:  cellSubViews as! [String : Any]))
+        
+         contentView.addConstraint(NSLayoutConstraint.init(item: rightArrow ?? UIImageView.init(frame: .zero), attribute: .centerY, relatedBy: .equal, toItem:  contentView, attribute: .centerY, multiplier: 1, constant: 0))
+        
+         contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-10-[bottomLine]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views:  cellSubViews as! [String : Any]))
+        
+         contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[bottomLine(0.5)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views:  cellSubViews as! [String : Any]))
+         contentView.addConstraint(NSLayoutConstraint.init(item: switchButton ?? UISwitch.init(frame: .zero), attribute: .centerY, relatedBy: .equal, toItem:  contentView, attribute: .centerY, multiplier: 1, constant: 0))
         
     }
 
@@ -129,45 +129,45 @@ class KIBaseSettingTableViewCell: UITableViewCell {
         var constraints : String
         switch style {
         case .DefaultStyle:
-            self.rightLabel.isHidden = true
-            self.switchButton?.isHidden = true
+             rightLabel.isHidden = true
+             switchButton?.isHidden = true
             constraints = "H:|-10-[leftLabel]-(>=10)-[rightArrow(8)]-10-|"
             break
         case .DefaultStyle_RightLabel_WithoutRightArrow:
-            self.rightArrow?.isHidden = true
-            self.switchButton?.isHidden = true
+             rightArrow?.isHidden = true
+             switchButton?.isHidden = true
             constraints = "H:|-10-[leftLabel]-(>=10)-[rightLabel]-10-|"
             break
             
         case .DefaultStyle_RightLabel:
-            self.switchButton?.isHidden = true
+             switchButton?.isHidden = true
             constraints = "H:|-10-[leftLabel]-(>=10)-[rightLabel]-13-[rightArrow(8)]-10-|"
             break
             
         case .OnlyDisplayLeftLabelStyle:
-            self.rightLabel.isHidden = true
-            self.rightArrow?.isHidden = true
-            self.switchButton?.isHidden = true
+             rightLabel.isHidden = true
+             rightArrow?.isHidden = true
+             switchButton?.isHidden = true
             constraints = "H:|-10-[leftLabel]-10-|"
             break
             
         case .SwitchStyle:
-            self.rightLabel.isHidden = true
-            self.rightArrow?.isHidden = true
-            self.switchButton?.isHidden = false
+             rightLabel.isHidden = true
+             rightArrow?.isHidden = true
+             switchButton?.isHidden = false
             constraints = "H:|-10-[leftLabel]-(>=10)-[switchButton]-10-|"
             break
         default: break
             
         }
         
-        self.contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: constraints, options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: self.cellSubViews as! [String : Any]))
+         contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: constraints, options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views:  cellSubViews as! [String : Any]))
         
     }
     
     func setupImageView(imageView:UIImageView,imageStr:String,imageSize:CGSize,LeftOrRight:NSInteger) {
         
-        self.switchButton?.isHidden = true
+        switchButton?.isHidden = true
         imageView.contentMode = UIViewContentMode.scaleAspectFill
         imageView.clipsToBounds = true
         let imageStr:String = imageStr
@@ -178,56 +178,56 @@ class KIBaseSettingTableViewCell: UITableViewCell {
                 imageView.image = UIImage.init(named: imageStr as String)
             }
             imageView.translatesAutoresizingMaskIntoConstraints = false
-            self.contentView.addSubview(imageView)
+             contentView.addSubview(imageView)
 
-            self.cellSubViews = ["leftLabel":leftLabel,"rightLabel":rightLabel,"rightArrow":rightArrow ?? UIImageView.init(frame:.zero) ,"switchButton":switchButton!,"imageView":imageView]
+             cellSubViews = ["leftLabel":leftLabel,"rightLabel":rightLabel,"rightArrow":rightArrow ?? UIImageView.init(frame:.zero) ,"switchButton":switchButton!,"imageView":imageView]
             
             if LeftOrRight == 0 {
-                if (self.leftLabelConstraints != nil) {
-                    self.contentView.removeConstraints(self.leftLabelConstraints as! [NSLayoutConstraint])
+                if ( leftLabelConstraints != nil) {
+                     contentView.removeConstraints( leftLabelConstraints as! [NSLayoutConstraint])
                 }
-                self.leftImageView = imageView;
+                 leftImageView = imageView;
                 
-                self.leftLabelConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|-10-[imageView(width)]-8-[leftLabel]-10-[rightArrow(8)]-10-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: ["width":(imageSize.width)], views: self.cellSubViews as! [String : Any]) as NSArray
+                 leftLabelConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|-10-[imageView(width)]-8-[leftLabel]-10-[rightArrow(8)]-10-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: ["width":(imageSize.width)], views:  cellSubViews as! [String : Any]) as NSArray
                 
-                self.contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[imageView(height)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: ["height" : (imageSize.height)], views: self.cellSubViews as! [String : Any]))
-                self.contentView.addConstraint(NSLayoutConstraint.init(item: imageView, attribute: .centerY, relatedBy: .equal, toItem: self.contentView, attribute: .centerY, multiplier: 1, constant: 0))
+                 contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[imageView(height)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: ["height" : (imageSize.height)], views:  cellSubViews as! [String : Any]))
+                 contentView.addConstraint(NSLayoutConstraint.init(item: imageView, attribute: .centerY, relatedBy: .equal, toItem:  contentView, attribute: .centerY, multiplier: 1, constant: 0))
                 
-                self.contentView.addConstraints(self.leftLabelConstraints as! [NSLayoutConstraint])
+                 contentView.addConstraints( leftLabelConstraints as! [NSLayoutConstraint])
             
             }
             
             if LeftOrRight == 1 {
-                if (self.rightLabelConstraints != nil) {
-                    self.contentView.removeConstraints(self.rightLabelConstraints as! [NSLayoutConstraint])
+                if ( rightLabelConstraints != nil) {
+                     contentView.removeConstraints( rightLabelConstraints as! [NSLayoutConstraint])
                 }
-                self.rightImageView = imageView
-                self.rightLabelConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|-10-[leftLabel]-(>=10)-[imageView(width)]-13-[rightArrow(8)]-10-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: ["width" : (imageSize.width)], views: self.cellSubViews as! [String : Any]) as NSArray
+                 rightImageView = imageView
+                 rightLabelConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|-10-[leftLabel]-(>=10)-[imageView(width)]-13-[rightArrow(8)]-10-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: ["width" : (imageSize.width)], views:  cellSubViews as! [String : Any]) as NSArray
                 
-                self.contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[imageView(height)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: ["height" : (imageSize.height)], views: self.cellSubViews as! [String : Any]))
+                 contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[imageView(height)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: ["height" : (imageSize.height)], views:  cellSubViews as! [String : Any]))
                 
-                self.contentView.addConstraint(NSLayoutConstraint.init(item: imageView, attribute: .centerY, relatedBy: .equal, toItem: self.contentView, attribute: .centerY, multiplier: 1, constant: 0))
+                 contentView.addConstraint(NSLayoutConstraint.init(item: imageView, attribute: .centerY, relatedBy: .equal, toItem:  contentView, attribute: .centerY, multiplier: 1, constant: 0))
                 
-                self.contentView.addConstraints(self.rightLabelConstraints as! [NSLayoutConstraint])
+                 contentView.addConstraints( rightLabelConstraints as! [NSLayoutConstraint])
                 
             }
-            self.setNeedsUpdateConstraints()
-            self.updateFocusIfNeeded()
-            self.layoutIfNeeded()
+             setNeedsUpdateConstraints()
+             updateFocusIfNeeded()
+             layoutIfNeeded()
         }
         
         //MARK: - layz
         var leftImageCornerRadius : CGFloat = 0.0  {
             didSet {
-                self.leftImageView?.layer.masksToBounds = true
-                self.leftImageView?.layer.cornerRadius = leftImageCornerRadius
+                 leftImageView?.layer.masksToBounds = true
+                 leftImageView?.layer.cornerRadius = leftImageCornerRadius
             }
         }
         
         var rightImageCornerRadius : CGFloat = 0.0  {
             didSet {
-                self.rightImageView?.layer.masksToBounds = true
-                self.rightImageView?.layer.cornerRadius = rightImageCornerRadius
+                 rightImageView?.layer.masksToBounds = true
+                 rightImageView?.layer.cornerRadius = rightImageCornerRadius
             }
         }
         
